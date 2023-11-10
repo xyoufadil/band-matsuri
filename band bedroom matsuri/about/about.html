@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <img src="g.PNG" alt="">
+    </div>
+    <ul>
+        <li><a class="active" href="file:///C:/Users/Lab%20RPL%20i5/Documents/band%20bedroom%20matsuri/band%20matsuri/home.html">Home</a></li>
+
+        <li><a class="active" href="file:///C:/Users/Lab%20RPL%20i5/Documents/band%20bedroom%20matsuri/NBHUY/schedule.html">schedule</a></li>
+
+        <li><a href="#News">News</a></li>
+
+        <li><a href="file:///C:/Users/Lab%20RPL%20i5/Documents/band%20bedroom%20matsuri/member/member.html">Member</a></li>
+
+        <li><a href="file:///C:/Users/Lab%20RPL%20i5/Documents/band%20bedroom%20matsuri/about/about.html">About</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="content-slide">
+            <div class="imgslide fade">
+                <div class="numberslide">1 / 3</div>
+                <img src="bg-spotify.png" alt="">
+            </div>
+
+            <div class="imgslide fade">
+                <div class="numberslide">2 / 3</div>
+                <img src="slide2.jpg" alt="">
+            </div>
+
+            <div class="imgslide fade">
+                <div class="numberslide">3 / 3</div>
+                <img src="slide3.jpg" alt="">
+            </div>
+
+            <a class="prev" onClick="nextslide(-1)">&#10094;</a>
+            <a class="next" onClick="nextslide(1)">&#10095;</a>
+        </div>
+
+        <div class="page">
+            <span class="dot" onClick="dotslide(1)"></span>
+            <span class="dot" onClick="dotslide(2)"></span>
+            <span class="dot" onClick="dotslide(3)"></span>
+        </div>
+
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlide(slideIndex);
+
+        function nextslide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        function dotslide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            var i;
+            var slides = document.getElementsByClassName("imgslide");
+            var dot = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < slides.length; i++) {
+
+                dot[i].className = dot[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            dot[slideIndex - 1].className += " active";
+        }
+    </script>
+        <div class="uncotex">
+            <center><b><p>Band Bedroom Matsuri</p></b></center>
+        </div>
+
+        <div class="news">
+            <center><p>Bedroom Matsuri adalah band yang mengcover lagu jepang dengan berbagai genre di kamar tidur masing masing. Band ini memiliki 3 member yang berposisi di bagian lead guitarist dan vocal, lalu rhythm guitarist dan bassist, namun genre utama bedroom matsuri adalah alternative rock. Bedroom Matsuri biasa menunjukkan karyanya melalui media youtube dan streaming service untuk musik seperti spotify dan deezer namun akhir akhir ini lebih sering mengisi acara offline di event event jepang.</p></center>
+        </div>
+<div class="member">
+    <center><img src="2.png"><br>
+        <div class="logo"><img src="instagram.png"><a href="https://www.instagram.com/pro2xy_music/?img_index=1"><b>pro2xy_music</b>
+        </a></div>
+        <div class="logo"><img src="youtube.png"><a href="https://www.youtube.com/@TheProxy2"><b>TheProxy2</b></a></div><br><br>
+    <center><img src="1.png"></center>
+    <div class="logo"><img src="instagram.png"><a href="https://www.instagram.com/klaudceeee/?img_index=1"><b>klaudceeee</b>
+    </a></div>
+    <div class="logo"><img src="youtube.png"><a href="https://www.youtube.com/@Klaudceaser"><b>KlaudC</b></a></div><br><br>
+    <center><img src="3.png"></center>
+    <div class="logo"><img src="instagram.png"><a href="https://www.instagram.com/fsyki/?img_index=1"><b>fsyki</b>
+    </a></div>
+    <div class="logo"><img src="youtube.png"><a href="https://www.youtube.com/@fsyki6276"><b>fsyki</b></a></div><br><br>
+</div>
+
+<p class="p"><center>Copyright © 2023 Russian Blue Group</center></p>
+</body>
+</html>

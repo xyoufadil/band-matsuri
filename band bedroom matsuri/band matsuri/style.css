@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+/* For mobile phones: */
+[class*="col-"]{
+    width:100%;
+}
+
+@media only screen and(min-width:600px){
+/* For tablets: */
+.col-m-1{width:8.33%;}
+.col-m-2{width:16.66%;}
+.col-m-3{width:25%;}
+.col-m-4{width:33.33%;}
+.col-m-5{width:41.66%;}
+.col-m-6{width:50%;}
+.col-m-7{width:58.33%;}
+.col-m-8{width:66.66%;}
+.col-m-9{width:75%;}
+.col-m-10{width:83.33%;}
+.col-m-11{width:91.66%;}
+.col-m-12{width:100%;}
+}
+@media only screen and(min-width:768px){
+/* For desktop: */
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+}
+#header{
+    height:200px;
+}
+#header img{
+    width: 100%;
+    height: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 105px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  .slide img{
+    width: 70%;
+    display: flex;
+    animation: slide 16s infinite;
+  }
+.courses img{
+    width: 300px;
+    height: 300px;
+    float: right;
+    padding-right: 120px;
+    margin-top: 50px;
+}
+.courses p {
+    padding: 120px;
+    font-size: 150%;
+    font-family: 'poppins-bold', sans-serif !important;
+}
+  /*slide
+  * {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    background-color: #2E765E;
+}
+
+
+/* Slideshow container */
+.container {
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px 0 0 0;
+}
+
+
+.content-slide {
+    max-width: 1100px;
+    position: relative;
+    margin: auto;
+}
+
+.imgslide {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    width:100%;
+    height: 100%;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: rgb(255, 254, 224);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.pre:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+}
+
+.text {
+    color: #fafafa;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.content-slide .numberslide {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* resposive */
+
+@media screen and (max-width: 800px) {
+
+    .content-slide {
+        padding: 8px 50px 12px 50px;
+    }
+
+    .next {
+        right: 50px;
+        border-radius: 3px 0 0 3px;
+    }
+    
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }    
+    to {
+        opacity: 1;
+    }
+}
+
+.container .page {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.page .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border-radius: 50%;
+}
+
+.page .active,
+.page .dot:hover {
+    background-color: #000000;
+}
+
+.spotify{
+    background-image: url(image.jpg);
+    height: 650px;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.spotify .tombol h3{
+    color: white;
+    float: left;
+    margin-right: 20px;
+    font-size: 150%;
+    font-family: 'poppins-bold', sans-serif !important;
+    -webkit-text-stroke: 0.5px #000000;
+}
+
+.spotify .tombol{
+    margin-right: 199px;
+    margin-top: 100px;
+    float: right;
+}
+
+.spotify .tombol .spotify-logo button{
+    background-image: url(spotify.jpg);
+    background-position: center;
+    background-size: 100%;
+    height: 90px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+}
+
+.spotify .tombol .youtube-logo button{
+    background-image: url(youtube.jpg);
+    background-position: center;
+    background-size: 100%;
+    height: 90px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+}
+
+.spotify .tombol .soundcloud-logo button{
+    background-image: url(soundcloud-logo.jpg);
+    background-position: center;
+    background-size: 100%;
+    height: 90px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+}
+
+.spotify .tombol .deezer-logo button{
+    background-image: url(deezer-logo.jpg);
+    background-position: center;
+    background-size: 100%;
+    height: 90px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+}
+
+.judul-news {
+    padding-top: 100px;
+    font-family: 'poppins-bold', sans-serif !important;
+    margin-bottom: 60px;
+}
+
+.news {
+    background-color: rgb(179, 178, 178);
+    border: 4px solid black;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    border: 2px solid #000000 ;
+}
+
+.news img{
+    width: 170px;
+    height: 185px;
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    float: left;
+}
+
+.news h1{
+    float: right;
+    margin-right: 430px;
+    font-family: 'poppins-bold', sans-serif !important;
+}
+
+.news p{
+    float: right;
+    margin-top: 90px;
+    margin-right: 40px;
+    font-family: 'poppins-bold', sans-serif !important;
+}
+
+.news a{
+    margin-left: 65px;
+    color: black;
+    font-size: 120%;
+    font-family: 'poppins-bold', sans-serif !important;
+}
+
+.selengkapnya button {
+    border-radius: 90px;
+    border: 4px solid black;
+    width: 150px;
+    height: 45px;
+    background-color: #535353;
+    color: #fafafa;
+    font-family: 'poppins-bold', sans-serif !important;
+}
+
+footer {
+    margin-top: 150px;
+    background-color: rgb(179, 178, 178);
+    height: 400px;
+    border-radius: 50px 50px 0px 0px;
+    border: 2px solid #000000 ;
+}
+
+footer .sosmed{
+    float: left;
+}
+
+footer .sosmed h1{
+    margin-left: 250px;
+    padding-top: 30px;
+    font-family: 'poppins-bold', sans-serif !important;
+    font-size: 200%;
+}
+
+footer .sosmed svg{
+    margin-left: 100px;
+    padding-top: 20px;
+}
+
+footer .sosmed a{
+    font-size: 130%;
+    text-decoration: none;
+    margin-left: 20px;
+    color: #000000;
+    font-family: 'poppins-bold', sans-serif !important;
+   }
+
+
+footer .kontak h1{
+    margin-top: 50px;
+    margin-right: 100px;
+    font-family: 'poppins-bold', sans-serif !important;
+    text-align: center;
+}
+
+footer .kontak {
+    float: right;
+    font-family: 'poppins', sans-serif !important;
+}
+
+.kontak p{
+    margin-right: 50px;
+}
+
+input{
+   width: 70%;
+   height: 40px;
+   border-radius: 10px;
+   background-color: #F8F8F8;
+   border: 1px solid black;
+}
+
+textarea{
+    width: 70%;
+   height: 100px;
+   border-radius: 10px;
+   background-color: #F8F8F8;
+   border: 1px solid black;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div id="header">
+        <img src="g.PNG" alt="">
+    </div>
+    <ul>
+        <li><a class="active" href="file:///C:/Users/Lab%20RPL%20i5/Documents/band%20bedroom%20matsuri/band%20matsuri/home.html">Home</a></li>
+
+        <li><a class="active" href="file:///C:/Users/Lab%20RPL%20i5/Documents/band%20bedroom%20matsuri/NBHUY/schedule.html">schedule</a></li>
+
+        <li><a href="C:\Users\Lab RPL i5\Documents\band bedroom matsuri\news\news.html">News</a></li>
+
+        <li><a href="file:///C:/Users/Lab%20RPL%20i5/Documents/band%20bedroom%20matsuri/member/member.html">Member</a></li>
+
+        <li><a href="file:///C:/Users/Lab%20RPL%20i5/Documents/band%20bedroom%20matsuri/about/about.html">About</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="content-slide">
+            <div class="imgslide fade">
+                <div class="numberslide">1 / 3</div>
+                <img src="slide1.jpg" alt="">
+            </div>
+
+            <div class="imgslide fade">
+                <div class="numberslide">2 / 3</div>
+                <img src="slide2.jpg" alt="">
+            </div>
+
+            <div class="imgslide fade">
+                <div class="numberslide">3 / 3</div>
+                <img src="slide3.jpg" alt="">
+            </div>
+
+            <a class="prev" onClick="nextslide(-1)">&#10094;</a>
+            <a class="next" onClick="nextslide(1)">&#10095;</a>
+        </div>
+
+        <div class="page">
+            <span class="dot" onClick="dotslide(1)"></span>
+            <span class="dot" onClick="dotslide(2)"></span>
+            <span class="dot" onClick="dotslide(3)"></span>
+        </div>
+
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlide(slideIndex);
+
+        function nextslide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        function dotslide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            var i;
+            var slides = document.getElementsByClassName("imgslide");
+            var dot = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < slides.length; i++) {
+
+                dot[i].className = dot[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            dot[slideIndex - 1].className += " active";
+        }
+    </script>
+    
+<!-- features -->
+<div class="uncotex">
+    <center><b><p>Band Bedroom Matsuri</p></b></center>
+</div>
+				<div class="col-wide">
+         <img src="2.png" alt="Gambar_Langit" style="width:400px;height:600px;">
+         <h4 style="float:right;margin-right: 425px; font-size: 200%; margin-top: 300px;">Purokishi - lead guitarist dan vocal</h4><br>
+   </div>
+   <br>
+   <div class="row features__row">
+    <div class="col-narrow features__phone">
+    </div>
+    <br>
+    <div class="col-wide--right features__padding">
+        <img src="1.png" style="width:400px;height:600px;float: right;">
+        <h4 style="float: right; font-size: 200%; margin-top: 300px; margin-right: 20px;">KlaudC - rhythm guitarist</h4><br>
+    <div>
+        <br>
+        <br>
+        <div class="row features__row">
+            <div class="col-narrow features__phone">
+            </div>
+            <div class="col-wide--right features__padding">
+                <img src="4.png" alt="Gambar_Langit" style="float: left; width:400px;height:600px; margin-top: 580px;">
+                <h4 style="float: right; margin-right: 650px; font-size: 250%;  margin-top: 300px;">fsyki - bassist</h4>
+        </div>
+
+
+
+    </body>
+
+</html>
